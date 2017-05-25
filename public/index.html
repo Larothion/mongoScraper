@@ -4,46 +4,63 @@
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
     <style>
-      body { background-color: #F2F6D0 }
+      body { background-color: #ffffff }
+
+      h2 {
+        font-size: 20px;
+      }
       #wrapper {
-        width: 960px;
         margin-left: auto;
         margin-right: auto;
+        background-image: url("http://wallpapercave.com/wp/StoMaHt.jpg");
+        color: white;
+        font-size: 20px
+      }
+      #sub-wrapper {
+        width: 1250px;
+         margin-left: auto;
+        margin-right: auto;
         padding-top: 5%;
+
       }
       #articles {
         display: inline-block;
-        overflow: auto;
         width: 60%;
-        height: 700px;
       }
       #notes {
         float: right;
         width: 30%;
+        margin-left: 10px;
+        font-size: 18px;
       }
       textarea, input {
         display: block;
-        width: 100%;
-        background-color: #FCF5C7;
+        width: 60%;
+        background-color: #ffffff;
       }
       input {
         height: 36px;
-        font-size: 24px;
+        font-size: 20px;
       }
       textarea {
         height: 200px;
-        font-size: 18px;
+        font-size: 17px;
       }
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+      <div id="sub-wrapper">
+        <h1>TechCrunch Scraper</h1>
+        <h2><i>For all of your Techy needs...</i></h2>
+        <div id="articles"></div>
+        <div id="notes"></div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
+
+
+<!-- "safekeeping": mongodb://heroku_xnx2qpnc:dffhfgo8u6shhdblc4pi6ksb78@ds157549.mlab.com:57549/heroku_xnx2qpnc -->

@@ -1,6 +1,4 @@
-/* Showing Mongoose's "Populated" Method (18.3.8)
- * INSTRUCTOR ONLY
- * =============================================== */
+
 
 // Dependencies
 var express = require("express");
@@ -30,7 +28,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://heroku_xnx2qpnc:dffhfgo8u6shhdblc4pi6ksb78@ds157549.mlab.com:57549/heroku_xnx2qpnc");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -47,14 +45,14 @@ db.once("open", function() {
 // Routes
 // ======
 
-// A GET request to scrape the echojs website
+// A GET request to scrape Techcrunch
 app.get("/scrape", function(req, res) {
-  // First, we grab the body of the html with request
-  request("http://www.echojs.com/", function(error, response, html) {
+  // First, we grab the body of Tech Crunch html. 
+  request("https://techcrunch.com/", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     // Now, we grab every h2 within an article tag, and do the following:
-    $("article h2").each(function(i, element) {
+    $("h2.post-title").each(function(i, element) {
 
       // Save an empty result object
       var result = {};
